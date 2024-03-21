@@ -16,11 +16,18 @@
         h1, h2 {
             margin-top: 0;
         }
-        #carrinho {
+        #carrinho-table {
+            width: 100%;
+            border-collapse: collapse;
             margin-top: 10px;
         }
-        #carrinho li {
-            margin-bottom: 5px;
+        #carrinho-table th, #carrinho-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        #carrinho-table th {
+            background-color: #f2f2f2;
         }
         #lista-produtos {
             width: 100%;
@@ -43,7 +50,16 @@
     <input type="text" id="busca-produto" placeholder="Digite o nome ou código do produto">
     <button onclick="adicionarAoCarrinho()">Adicionar ao Carrinho</button>
     <h2>Carrinho</h2>
-    <ul id="carrinho"></ul>
+    <table id="carrinho-table">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Valor</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody id="carrinho-body"></tbody>
+    </table>
     <button onclick="finalizarVenda()">Finalizar Venda</button>
     <p id="valor-total"></p>
     <button onclick="location.href='produtos.html'">Ver Todos os Produtos</button>
