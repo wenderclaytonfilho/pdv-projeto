@@ -1,11 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>CRUD de Produtos</title>
 </head>
 <body>
-    
+    <h1>Produtos</h1>
+    <ul id="lista-produtos"></ul>
+    <h2>Adicionar ao Carrinho</h2>
+    <input type="text" id="busca-produto" placeholder="Digite o nome ou código do produto">
+    <button onclick="adicionarAoCarrinho()">Adicionar ao Carrinho</button>
+    <h2>Carrinho</h2>
+    <ul id="carrinho"></ul>
+    <button onclick="finalizarVenda()">Finalizar Venda</button>
+
+    <script src="script.js"></script>
 </body>
 </html>
