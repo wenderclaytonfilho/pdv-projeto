@@ -6,12 +6,17 @@ function carregarProdutos() {
     fetch("produtos.json")
     .then(response => response.json())
     .then(data => {
-        const listaProdutos = document.getElementById("lista-produtos");
+        const listaProdutos = document.getElementById("lista-produtos-body");
         listaProdutos.innerHTML = "";
         data.forEach(produto => {
-            const li = document.createElement("li");
-            li.textContent = `${produto.nome} (Código: ${produto.codigo}) - R$ ${produto.valor} - ${produto.quantidade} disponíveis`;
-            listaProdutos.appendChild(li);
+            const tr = document.createElement("tr");
+            tr.innerHTML = `
+                <td>${produto.nome}</td>
+                <td>${produto.codigo}</td>
+                <td>R$ ${produto.valor.toFixed(2)}</td>
+                <td>${produto.quantidade}</td>
+            `;
+            listaProdutos.appendChild(tr);
         });
     });
 }
@@ -32,6 +37,7 @@ function adicionarAoCarrinho() {
                 produtoEncontrado.quantidade--;
                 atualizarQuantidadeNoArquivo(data);
                 carregarProdutos();
+                calcularValorTotal();
             } else {
                 alert("Este produto está esgotado.");
             }
@@ -57,8 +63,7 @@ function finalizarVenda() {
         atualizarQuantidadeNoArquivo(data);
         carregarProdutos();
         carrinho.innerHTML = "";
-
-        gerarPDF(produtosVendidos);
+        calcularValorTotal();
     });
 }
 
@@ -72,12 +77,13 @@ function atualizarQuantidadeNoArquivo(data) {
     });
 }
 
-function gerarPDF(produtos) {
-    const doc = new jsPDF();
-    let y = 20;
-    produtos.forEach(produto => {
-        doc.text(10, y, produto);
-        y += 10;
+function calcularValorTotal() {
+    const carrinho = document.getElementById("carrinho");
+    const produtosCarrinho = carrinho.getElementsByTagName("li");
+    let total = 0;
+    Array.from(produtosCarrinho).forEach(item => {
+        const valorProduto = parseFloat(item.textContent.trim().split(" - ")[1].substring(3));
+        total += valorProduto;
     });
-    doc.save("produtos_vendidos.pdf");
+    document.getElementById("valor-total").textContent = `Valor Total: R$ ${total.toFixed(2)}`;
 }

@@ -1,5 +1,146 @@
 [
-    {"codigo": "001", "nome": "Produto A", "valor": 10, "quantidade": 5},
-    {"codigo": "002", "nome": "Produto B", "valor": 20, "quantidade": 10},
-    {"codigo": "003", "nome": "Produto C", "valor": 15, "quantidade": 3}
+    {
+        "codigo": "0001",
+        "nome": "Antitoxico 20 ml",
+        "valor": 20.00,
+        "quantidade": 2
+    },
+    {
+        "codigo": "0002",
+        "nome": "Chemitril 50 ml",
+        "valor": 38.00,
+        "quantidade": 2
+    },
+    {
+        "codigo": "0003",
+        "nome": "Penfort 50 ml",
+        "valor": 65.00,
+        "quantidade": 2
+    },
+    {
+        "codigo": "0004",
+        "nome": "Zelotril 50 ml",
+        "valor": 40.00,
+        "quantidade": 2
+    },
+    {
+        "codigo": "0005",
+        "nome": "Terramicina 50 ml",
+        "valor": 38.00,
+        "quantidade": 2
+    },
+    {
+        "codigo": "0006",
+        "nome": "Ferron B-12 50 ml",
+        "valor": 22.00,
+        "quantidade": 2
+    },
+    {
+        "codigo": "0007",
+        "nome": "Finador 50 ml",
+        "valor": 30.00,
+        "quantidade": 2
+    },
+    {
+        "codigo": "0008",
+        "nome": "Dectomax 50 ml",
+        "valor": 45.00,
+        "quantidade": 2
+    },
+    {
+        "codigo": "0009",
+        "nome": "Modificador orgânico 100 ml",
+        "valor": 25.00,
+        "quantidade": 2
+    },
+    {
+        "codigo": "0010",
+        "nome": "Ivomec 50 ml",
+        "valor": 38.00,
+        "quantidade": 2
+    },
+    {
+        "codigo": "0011",
+        "nome": "Cort-trat 50 ml",
+        "valor": 35.00,
+        "quantidade": 2
+    },
+    {
+        "codigo": "0012",
+        "nome": "Tormicina LA 50 ml",
+        "valor": 32.00,
+        "quantidade": 2
+    },
+    {
+        "codigo": "0013",
+        "nome": "Diastin 20 ml",
+        "valor": 25.00,
+        "quantidade": 2
+    },
+    {
+        "codigo": "0014",
+        "nome": "Vitaká 20 ml",
+        "valor": 25.00,
+        "quantidade": 2
+    },
+    {
+        "codigo": "0015",
+        "nome": "Tristezina 20 ml",
+        "valor": 40.00,
+        "quantidade": 2
+    },
+    {
+        "codigo": "0016",
+        "nome": "Vit ADE 50 ml",
+        "valor": 20.00,
+        "quantidade": 2
+    },
+    {
+        "codigo": "0017",
+        "nome": "Gasel 20 ml",
+        "valor": 35.00,
+        "quantidade": 2
+    },
+    {
+        "codigo": "0018",
+        "nome": "Ivermic+ ADE 50 ml",
+        "valor": 35.00,
+        "quantidade": 2
+    },
+    {
+        "codigo": "0019",
+        "nome": "D-500 50 ml",
+        "valor": 35.00,
+        "quantidade": 2
+    },
+    {
+        "codigo": "0020",
+        "nome": "Hipofen",
+        "valor": 20.00,
+        "quantidade": 2
+    },
+    {
+        "codigo": "0021",
+        "nome": "Cálcio 500 ml",
+        "valor": 30.00,
+        "quantidade": 2
+    },
+    {
+        "codigo": "0022",
+        "nome": "Cálcio 200 ml",
+        "valor": 25.00,
+        "quantidade": 2
+    },
+    {
+        "codigo": "0023",
+        "nome": "Soro vitaminado 500 ml",
+        "valor": 35.00,
+        "quantidade": 2
+    },
+    {
+        "codigo": "0024",
+        "nome": "Dexaflan 50 ml",
+        "valor": 30.00,
+        "quantidade": 2
+    }
 ]

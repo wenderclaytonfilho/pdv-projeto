@@ -3,44 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Produtos Disponíveis</title>
+    <title>Lista de Produtos</title>
+    <style>
+        /* Estilos para a tela produtos.html */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        h1 {
+            margin-top: 0;
+        }
+        #tabela-produtos {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        #tabela-produtos th, #tabela-produtos td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        #tabela-produtos th {
+            background-color: #f2f2f2;
+        }
+    </style>
 </head>
 <body>
-    <h1>Produtos Disponíveis</h1>
+    <h1>Lista de Produtos</h1>
     <table id="tabela-produtos">
         <thead>
             <tr>
                 <th>Nome</th>
+                <th>Código</th>
                 <th>Valor</th>
                 <th>Quantidade</th>
             </tr>
         </thead>
-        <tbody id="corpo-tabela"></tbody>
+        <tbody id="lista-produtos"></tbody>
     </table>
 
     <script src="script.js"></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            carregarProdutos();
-        });
-
-        function carregarProdutos() {
-            fetch("produtos.json")
-            .then(response => response.json())
-            .then(data => {
-                const corpoTabela = document.getElementById("corpo-tabela");
-                corpoTabela.innerHTML = "";
-                data.forEach(produto => {
-                    const tr = document.createElement("tr");
-                    tr.innerHTML = `
-                        <td>${produto.nome}</td>
-                        <td>R$ ${produto.valor}</td>
-                        <td>${produto.quantidade}</td>
-                    `;
-                    corpoTabela.appendChild(tr);
-                });
-            });
-        }
-    </script>
 </body>
 </html>
