@@ -1,5 +1,5 @@
 [
-    {"nome": "Produto A", "valor": 10, "quantidade": 5},
-    {"nome": "Produto B", "valor": 20, "quantidade": 10},
-    {"nome": "Produto C", "valor": 15, "quantidade": 3}
+    {"codigo": "001", "nome": "Produto A", "valor": 10, "quantidade": 5},
+    {"codigo": "002", "nome": "Produto B", "valor": 20, "quantidade": 10},
+    {"codigo": "003", "nome": "Produto C", "valor": 15, "quantidade": 3}
 ]

@@ -57,6 +57,8 @@ function finalizarVenda() {
         atualizarQuantidadeNoArquivo(data);
         carregarProdutos();
         carrinho.innerHTML = "";
+
+        gerarPDF(produtosVendidos);
     });
 }
 
@@ -68,4 +70,14 @@ function atualizarQuantidadeNoArquivo(data) {
         },
         body: JSON.stringify(data)
     });
+}
+
+function gerarPDF(produtos) {
+    const doc = new jsPDF();
+    let y = 20;
+    produtos.forEach(produto => {
+        doc.text(10, y, produto);
+        y += 10;
+    });
+    doc.save("produtos_vendidos.pdf");
 }
