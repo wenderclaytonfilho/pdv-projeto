@@ -2,6 +2,15 @@ document.addEventListener("DOMContentLoaded", function() {
     carregarProdutos();
 });
 
+
+document.addEventListener("keydown", function(event) {
+    if (event.key === "F4") {
+        finalizarVenda();
+    } else if (event.key === "F6") {
+        location.href = 'produtos.html';
+    }
+});
+
 function carregarProdutos() {
     fetch("produtos.json")
     .then(response => response.json())

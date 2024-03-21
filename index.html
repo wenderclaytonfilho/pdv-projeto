@@ -42,6 +42,15 @@
         #lista-produtos th {
             background-color: #f2f2f2;
         }
+        #teclas-atalho {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #f2f2f2;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+        }
     </style>
 </head>
 <body>
@@ -76,7 +85,13 @@
         </thead>
         <tbody id="lista-produtos-body"></tbody>
     </table>
-
+    <div id="teclas-atalho">
+        <h3>Teclas de Atalho</h3>
+        <ul>
+            <li><strong>F4:</strong> Finalizar Venda</li>
+            <li><strong>F6:</strong> Ver Todos os Produtos</li>
+        </ul>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
